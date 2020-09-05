@@ -1,0 +1,25 @@
+<!-- <% topics.forEach(function(top){%>
+<li><%= top.name %></li>
+<li><img src=<%=top.img %>></li>
+<% }); %>  -->
+<%- include("partials/header") %>
+<div class="container pr-1 pl-1 pt-1 mt1-4 lc pb-1 lc">
+    <h1 class="font3"><%= T.toUpperCase()%> Topics</h1>
+  <div class="row border1">
+    <% topics.forEach(function(top){%>
+     <div class="col-lg-3 col-md-3 col-sm-4 col-xm-6 mb-2 mt-2">
+       <a class="font lc bl" href="/<%= T%>/<%=top._id%>"><div class="card h50 border1">
+            <img src="<%=top.img %>" class="card-img-top img-fluid img-thumbnail" alt="...">
+            <div class="card-body lc">
+              <h5 class="card-title bl"><%= top.name %></h5>
+              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div></a>
+     </div>
+     <% }); %>
+  </div>
+
+</div>
+</body>
+<%- include("partials/footer") %>
