@@ -70,12 +70,14 @@
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>websites</h2>
           <p>This website section gives you the best websites,well searched sites and top rated sites for given content,it is given in the order of best content and it will goes on.</p>
+          <%id[0].websites.forEach(function(w){%>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>Geeks for Geeks</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>https://www.geeksforgeeks.org/data-structures/</h6>
+            <h5 class="w3-opacity"><b><%=w.name%></b></h5>
+            <a href="<%=w.url%>"><h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><%=w.url%></h6></a>
             <hr>
           </div>
-          <div class="w3-container">
+          <% }); %>
+          <!-- <div class="w3-container">
             <h5 class="w3-opacity"><b>Wikipedia</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>https://en.wikipedia.org/wiki/Data_structure</h6>
             <hr>
@@ -89,7 +91,7 @@
             <h5 class="w3-opacity"><b>codedad</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>http://codedad.co.uk/13-resources-learn-data-structures-algorithms/</h6>
             <hr>
-          </div>
+          </div> -->
         </div>
   
         <div class="w3-container w3-card w3-white">
