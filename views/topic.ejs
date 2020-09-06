@@ -44,7 +44,7 @@
             </div>
             <br>
   
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>course usefulness and level</b></p>
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right txc"></i>course usefulness and level</b></p>
             <p>placements and medium</p>
             <div class="w3-light-grey w3-round-xlarge">
               <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
@@ -68,51 +68,48 @@
       <div class="w3-twothird">
       
         <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>websites</h2>
+          <h2 class="w3-padding-16 font"><i class="fa fa-file-text txc" aria-hidden="true"> </i> Websites</h2>
           <p>This website section gives you the best websites,well searched sites and top rated sites for given content,it is given in the order of best content and it will goes on.</p>
           <%id[0].websites.forEach(function(w){%>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b><%=w.name%></b></h5>
-            <a href="<%=w.url%>"><h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><%=w.url%></h6></a>
+            <h5 class="w3-opacity font3"><b><%=w.name%></b></h5>
+            <a class="txc" href="<%=w.url%>"><h6><i class="fa fa-link txc" aria-hidden="true"></i> <%=w.url%></h6></a>
             <hr>
           </div>
           <% }); %>
-          <!-- <div class="w3-container">
-            <h5 class="w3-opacity"><b>Wikipedia</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>https://en.wikipedia.org/wiki/Data_structure</h6>
-            <hr>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Tutorial point</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>https://www.tutorialspoint.com/data_structures_algorithms/data_structures_basics.htm</h6>
-            <br>
-          </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>codedad</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>http://codedad.co.uk/13-resources-learn-data-structures-algorithms/</h6>
-            <hr>
-          </div> -->
         </div>
-  
-        <div class="w3-container w3-card w3-white">
-          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-padding-16 font"><i class="fa fa-file-text txc" aria-hidden="true"> </i> Coureses</h2>
+          <p>This website section gives you the best websites,well searched sites and top rated sites for given content,it is given in the order of best content and it will goes on.</p>
+          <%id[0].courses.forEach(function(w){%>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-            <p>Web Development! All I need to know in one place</p>
+            <h5 class="w3-opacity font3"><b><%=w.name%></b></h5>
+            <a class="txc" href="<%=w.url%>"><h6><i class="fa fa-link txc" aria-hidden="true"></i> <%=w.url%></h6></a>
             <hr>
           </div>
+          <% }); %>
+        </div>
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-padding-16 font"><i class="fa fa-file-text txc" aria-hidden="true"> </i> Channels</h2>
+          <p>This website section gives you the best websites,well searched sites and top rated sites for given content,it is given in the order of best content and it will goes on.</p>
+          <%id[0].channels.forEach(function(w){%>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>London Business School</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-            <p>Master Degree</p>
+            <h5 class="w3-opacity font3"><b><%=w.name%></b></h5>
+            <a class="txc" href="<%=w.url%>"><h6><i class="fa fa-link txc" aria-hidden="true"></i> <%=w.url%></h6></a>
             <hr>
           </div>
+          <% }); %>
+        </div>
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-padding-16 font"><i class="fa fa-file-text txc" aria-hidden="true"> </i> TextBooks</h2>
+          <p>This website section gives you the best websites,well searched sites and top rated sites for given content,it is given in the order of best content and it will goes on.</p>
+          <%id[0].testbooks.forEach(function(w){%>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>School of Coding</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-            <p>Bachelor Degree</p><br>
+            <h5 class="w3-opacity font3"><b><%=w.name%></b></h5>
+            <a class="txc" href="<%=w.url%>"><h6><i class="fa fa-link txc" aria-hidden="true"></i> <%=w.url%></h6></a>
+            <hr>
           </div>
+          <% }); %>
         </div>
   
       <!-- End Right Column -->
