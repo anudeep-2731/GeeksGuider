@@ -12,7 +12,11 @@ mongoose.connect("mongodb://localhost/guiderv1",{ useNewUrlParser: true,useUnifi
 var topicSchema =new mongoose.Schema({
     name: String,
     img: String,
-    des1: String,
+    domain: String,
+    history: {},
+    usage: {},
+    rating:[],
+    use:[],
     websites: [],
     courses: [],
     channels: [],
