@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+<div class="container pr-1 pl-1 pt-1 mt1-4 lc pb-1">
+    <div class="row">
+     <div class="col-lg-4 col-md-4 col-sm-4">
+       <img style="height: 500px;" src="<%=data.volumeInfo.imageLinks.smallThumbnail%>">
+     </div>
+     <div class="col-lg-8 col-md-8 col-sm-8">
+        <ul>
+            <li>NAME: <%=data["volumeInfo"].title%></li>
+            <li>AUTHORS: <%=data["volumeInfo"].authors[0]%></li>
+            <li>ISBN: <%=data["volumeInfo"]["industryIdentifiers"][0].identifier%></li>
+            <li>DESCRIPTION: <%=data["volumeInfo"].description%></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
