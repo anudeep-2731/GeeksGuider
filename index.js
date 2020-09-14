@@ -1,10 +1,12 @@
 var express=require("express");
 var app= express();
 var mongoose=require("mongoose");
+var request=require("request");
 const bodyParser = require("body-parser");
 const { urlencoded } = require("body-parser");
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.set("view engine","ejs");
 
 mongoose.connect("mongodb://localhost/guiderv1",{ useNewUrlParser: true,useUnifiedTopology: true });
 
@@ -29,6 +31,17 @@ var topicSchema =new mongoose.Schema({
 // var Topic1=mongoose.model("placement",topicSchema);
 app.get("/",function(req,res){
     res.render("home.ejs");
+});
+app.get("/books/:volid",function(req,res){
+    var par=req.params.volid;
+    var url="https://www.googleapis.com/books/v1/volumes/"+par;
+    request(url,function(error,response,body){
+        if(!error&&response.statusCode==200){
+            var bookdata=JSON.parse(body);
+            //console.log(bookdata);
+            res.render("books.ejs",{data:bookdata});
+        }
+    });
 });
 app.get("/topicslist",function(req,res){
     res.render("topicslist.ejs");
