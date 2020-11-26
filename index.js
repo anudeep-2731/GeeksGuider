@@ -6,9 +6,11 @@ const bodyParser = require("body-parser");
 const { urlencoded } = require("body-parser");
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
 app.set("view engine","ejs");
-
-mongoose.connect("mongodb://localhost/guiderv1",{ useNewUrlParser: true,useUnifiedTopology: true });
+//mongodb://localhost/guiderv1
+mongoose.connect("mongodb+srv://anudeep2731:Anu2731@cluster0.94lnu.mongodb.net/<geeksguider>?retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true });
+//mongo "mongodb+srv://cluster0.94lnu.mongodb.net/<dbname>" --username anudeep2731
 
 
 var topicSchema =new mongoose.Schema({
@@ -23,12 +25,12 @@ var topicSchema =new mongoose.Schema({
     courses: [],
     channels: [],
     contests: [],
-    testbooks: [],
+    textbooks: [],
     des2: String
 });
 
-// var Topic =mongoose.model("cse",topicSchema);
-// var Topic1=mongoose.model("placement",topicSchema);
+var cse =mongoose.model("cse",topicSchema);
+var trendtech=mongoose.model("trendtech",topicSchema);
 app.get("/",function(req,res){
     res.render("home.ejs");
 });
@@ -43,9 +45,29 @@ app.get("/books/:volid",function(req,res){
         }
     });
 });
+app.post("/secresults",function(req,res){
+    var par=req.body.search;
+    var url="https://www.googleapis.com/books/v1/volumes?q="+par;
+    request(url,function(error,response,body){
+        if(!error&&response.statusCode==200){
+            var bookdata=JSON.parse(body);
+            //console.log(bookdata);
+            res.render("secbooks.ejs",{data:bookdata});
+        }
+    });
+});
 app.get("/topicslist",function(req,res){
     res.render("topicslist.ejs");
 });
+app.get("/placement",function(req,res){
+        res.render("placement.ejs");
+    });
+    app.get("/interq",function(req,res){
+        res.render("interq.ejs");
+    });
+    app.get("/interexp",function(req,res){
+        res.render("interexp.ejs");
+    });
 app.get("/:branch",function(req,res){
    var par=req.params.branch;
    var topic =mongoose.model(par,topicSchema);

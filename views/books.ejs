@@ -7,8 +7,11 @@
      <div class="col-lg-8 col-md-8 col-sm-8">
         <ul>
             <li>NAME: <%=data["volumeInfo"].title%></li>
+            <br>
             <li>AUTHORS: <%=data["volumeInfo"].authors[0]%></li>
+            <br>
             <li>ISBN: <%=data["volumeInfo"]["industryIdentifiers"][0].identifier%></li>
+            <br>
             <li>DESCRIPTION: <%=data["volumeInfo"].description%></li>
         </ul>
       </div>
