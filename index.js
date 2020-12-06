@@ -34,6 +34,9 @@ var trendtech=mongoose.model("trendtech",topicSchema);
 app.get("/",function(req,res){
     res.render("home.ejs");
 });
+app.get("/sitemap1.xml",function(req,res){
+    res.send("sitemap1.xml");
+});
 app.get("/books/:volid",function(req,res){
     var par=req.params.volid;
     var url="https://www.googleapis.com/books/v1/volumes/"+par;
