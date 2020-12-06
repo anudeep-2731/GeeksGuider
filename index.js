@@ -35,7 +35,11 @@ app.get("/",function(req,res){
     res.render("home.ejs");
 });
 app.get("/sitemap1.xml",function(req,res){
-    res.sendFile("sitemap1.xml");
+    res.sendFile(path.format({
+        root: '/',
+        base: 'sitemap1.xml',
+        ext: 'ignored'
+      }));
 });
 app.get("/books/:volid",function(req,res){
     var par=req.params.volid;
