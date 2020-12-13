@@ -5,16 +5,17 @@
        <img style="height: 500px;" src="<%=data.volumeInfo.imageLinks.smallThumbnail%>">
      </div>
      <div class="col-lg-8 col-md-8 col-sm-8">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
         <ul>
-            <li>NAME: <%=data["volumeInfo"].title%></li>
+            <li><strong>NAME:</strong> <%=data["volumeInfo"].title%></li>
             <br>
-            <li>AUTHORS: <%=data["volumeInfo"].authors[0]%></li>
+            <li><strong>AUTHORS:</strong> <%=data["volumeInfo"].authors[0]%></li>
             <br>
-            <li>ISBN: <%=data["volumeInfo"]["industryIdentifiers"][0].identifier%></li>
+            <li><strong>ISBN:</strong> <%=data["volumeInfo"]["industryIdentifiers"][0].identifier%></li>
             <br>
-            <li>DESCRIPTION: <%=data["volumeInfo"].description%></li>
+            <li><strong>DESCRIPTION:</strong> <%=data["volumeInfo"].description%></li>
         </ul>
-      </div>
+      </div></div>
     </div>
 </div>
 

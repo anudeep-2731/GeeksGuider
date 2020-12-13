@@ -18,14 +18,14 @@
           </div>
           <br>
           <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large txc"></i><%=id[0].domain%></p>
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large txc"></i><a href="<%=id[0].history.url%>"><%=id[0].history.name%></a></p>
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large txc"></i><a href="<%=id[0].usage.url%>"><%=id[0].usage.name%></a></p>
+            <p class="font bl"><i class="fa fa-briefcase fa-fw w3-margin-right w3-large txc"></i><%=id[0].domain%></p>
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large txc"></i><a class="font bl" href="<%=id[0].history.url%>"><%=id[0].history.name%></a></p>
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large txc"></i><a class="font bl" href="<%=id[0].usage.url%>"><%=id[0].usage.name%></a></p>
             <hr>
   
-            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right txc"></i>rated ordering</b></p>
+            <p class="w3-large font txc"><b class="font3"><i class="fa fa-asterisk fa-fw w3-margin-right txc"></i>rated ordering</b></p>
             <% id[0].rating.forEach(function(r){ %>
-            <p><%=r.name%></p>
+            <p class="font bl"><%=r.name%></p>
             <div class="w3-light-grey w3-round-xlarge w3-small">
               <div class="w3-container w3-center w3-round-xlarge bac w3-text-white" style="width:<%=r.per%>"><%=r.per%></div>
             </div>
@@ -45,9 +45,9 @@
               <div class="w3-container w3-center w3-round-xlarge bac w3-text-white" style="width:50%">50%</div> -->
             <br>
   
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right txc"></i>course usefulness and level</b></p>
+            <p class="w3-large w3-text-theme txc"><b class="font3"><i class="fa fa-globe fa-fw w3-margin-right txc"></i>course usefulness and level</b></p>
             <%id[0].use.forEach(function(r){%>
-              <p><%=r.name%></p>
+              <p class="font bl"><%=r.name%></p>
               <div class="w3-light-grey w3-round-xlarge w3-small">
                 <div class="w3-container w3-center w3-round-xlarge bac w3-text-white" style="width:<%=r.level%>"><%=r.level%></div>
               </div>
@@ -62,13 +62,13 @@
       <!-- Right Column -->
       <div class="w3-twothird">
         <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h1 class="txc"><%=id[0].name%></h1></div>
+        <h1 class="txc font3">Best of <%=id[0].name%></h1></div>
         <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h5>These sections gives you the best websites,courses,channels,lectures,textbooks to learn <%=id[0].name%> ,provide you with a best of all resourses to study <%=id[0].name%></h5>
+        <h5 class="font2">Best websites,courses,channels,lectures,textbooks to learn <%=id[0].name%> ,provide you with a best of all resourses to study <%=id[0].name%></h5>
       </div>
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-padding-16 font"><i class="fa fa-file-text txc" aria-hidden="true"> </i> Websites</h2>
-          <p>This website section gives you the best websites to learn <%=id[0].name%> ,well searched sites and top rated sites for given content,it is given in the order of best content and it will goes on.</p>
+          <p class="font2">This website section gives you the best websites to learn <%=id[0].name%> ,well searched sites and top rated sites for given content,it is given in the order of best content and it will goes on.</p>
           <%id[0].websites.forEach(function(w){%>
           <div class="w3-container">
             <h5 class="w3-opacity font3"><b><%=w.name%></b></h5>
@@ -79,7 +79,7 @@
         </div>
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-padding-16 font"><i class="fa fa-file-text txc" aria-hidden="true"> </i> Coureses</h2>
-          <p>This Courses section gives you the best courses to learn <%=id[0].name%>,well searched courses and top rated courses for given content,it is given in the order of best content and it will goes on.</p>
+          <p class="font2">This Courses section gives you the best courses to learn <%=id[0].name%>,well searched courses and top rated courses for given content,it is given in the order of best content and it will goes on.</p>
           <%id[0].courses.forEach(function(w){%>
           <div class="w3-container">
             <h5 class="w3-opacity font3"><b><%=w.name%></b></h5>
@@ -90,7 +90,7 @@
         </div>
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-padding-16 font"><i class="fa fa-file-text txc" aria-hidden="true"> </i> Channels</h2>
-          <p>This channels section gives you the best youtube channels to learn <%=id[0].name%>,well searched lectures in youtube and top rated channels for given content,it is given in the order of best content and it will goes on.</p>
+          <p class="font2">This channels section gives you the best youtube channels to learn <%=id[0].name%>,well searched lectures in youtube and top rated channels for given content,it is given in the order of best content and it will goes on.</p>
           <%id[0].channels.forEach(function(w){%>
           <div class="w3-container">
             <h5 class="w3-opacity font3"><b><%=w.name%></b></h5>
@@ -101,7 +101,7 @@
         </div>
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-padding-16 font"><i class="fa fa-file-text txc" aria-hidden="true"> </i> TextBooks</h2>
-          <p>This Testbooks section gives you the best testbooks to learn <%=id[0].name%>,well searched textbooks and top rated testbooks for given content,it is given in the order of best content and it will goes on.</p>
+          <p class="font2">This Testbooks section gives you the best testbooks to learn <%=id[0].name%>,well searched textbooks and top rated testbooks for given content,it is given in the order of best content and it will goes on.</p>
           <%id[0].textbooks.forEach(function(w){%>
           <div class="w3-container">
             <h5 class="w3-opacity font3"><b><%=w.name%></b></h5>
@@ -127,7 +127,7 @@
                 <a class="font lc bl" href="/cse/5fbf58cf07566712ac1ecb99"><div class="card h50 border1">
                   <img src="/images/co.jpg" class="card-img-top img-fluid img-thumbnail" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title bl">Computer Organization</h5>
+                    <h5 class="card-title bl font"> Best of Computer Organization</h5>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a> -->
                   </div>
@@ -137,7 +137,7 @@
                 <a class="font lc bl" href="/cse/5fbf58cf07566712ac1ecb9a"><div class="card h50 border1">
                   <img src="/images/flat.jpg" class="card-img-top img-fluid img-thumbnail" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title bl">Theory of Automation(FLAT)</h5>
+                    <h5 class="card-title bl font">Best of Theory of Automation(FLAT)</h5>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a> -->
                   </div>
@@ -147,7 +147,7 @@
                 <a class="font lc bl" href="/cse/5fbf58cf07566712ac1ecb92"><div class="card h50 border1">
                   <img src="/images/cd.jpg"class="card-img-top img-fluid img-thumbnail"  alt="...">
                   <div class="card-body">
-                    <h5 class="card-title bl">Compiler Design</h5>
+                    <h5 class="card-title bl font">Best of Compiler Design</h5>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a> -->
                   </div>
@@ -157,7 +157,7 @@
                 <a class="font lc bl" href="/cse/5fbf58cf07566712ac1ecb93"><div class="card h50 border1">
                   <img src="/images/ds.jpg"class="card-img-top img-fluid img-thumbnail"  alt="...">
                   <div class="card-body ">
-                    <h5 class="card-title bl">Data Structures</h5>
+                    <h5 class="card-title bl font">Best ofData Structures</h5>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a> -->
                   </div>
